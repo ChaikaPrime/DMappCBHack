@@ -1,4 +1,18 @@
 {
+    "Centre": {
+        "contributors": [
+            {
+                "John Smith": "2io3hadjfhajkshdf"
+            }
+        ],
+        "points": [
+            {
+                "name": "NEW OXFORD STREET",
+                "coordinates": [51.516735, -0.128466]
+            }
+        ]
+    },
+
     "tower_to_wapping": {
         "contributors": [
             {
@@ -11,36 +25,123 @@
                 "Michelle Power": "23oeqrfmldno"
             }
         ],
-        "coordinates": [
-            [51.516735, -0.128466],
-            [51.517623, -0.124379],
-            [51.516739, -0.119746],
-            [51.513399, -0.116122],
-            [51.511880, -0.117265],
-            [51.507075, -0.115403],
-            [51.503529, -0.111341],
-            [51.501338, -0.108752],
-            [51.499120, -0.106150],
-            [51.496102, -0.101333],
-            [51.495061, -0.098697],
-            [51.494218, -0.094439],
-            [51.494333, -0.087649],
-            [51.495693, -0.083414],
-            [51.496440, -0.080674],
-            [51.495681, -0.078243],
-            [51.494820, -0.076190],
-            [51.493691, -0.074264],
-            [51.492803, -0.071118],
-            [51.492374, -0.065834],
-            [51.492200, -0.061290],
-            [51.490513, -0.059849],
-            [51.489053, -0.058024],
-            [51.489610, -0.056401],
-            [51.490942, -0.053175],
-            [51.491113, -0.050503],
-            [51.492860, -0.047922],
-            [51.495462, -0.051355],
-            [51.498145, -0.049944]
+        "points": [
+            {
+                "name": "NEW OXFORD STREET",
+                "coordinates": [51.516735, -0.128466]
+            },
+            {
+                "name": "MUSEUM STREET",
+                "coordinates": [51.517623, -0.124379]
+            },
+            {
+                "name": "HOLBORN STATION",
+                "coordinates": [51.516739, -0.119746]
+            },
+            {
+                "name": "ALDWYCH / THE ROYAL COURTS OF JUSTICE",
+                "coordinates": [51.513399, -0.116122]
+            },
+            {
+                "name": "ALDWYCH / SOMERSET HOUSE",
+                "coordinates": [51.511880, -0.117265]
+            },
+            {
+                "name": "WATERLOO BRIDGE / SOUTH BANK",
+                "coordinates": [51.507075, -0.115403]
+            },
+            {
+                "name": "WATERLOO STATION / WATERLOO ROAD",
+                "coordinates": [51.503529, -0.111341]
+            },
+            {
+                "name": "THE OLD VIC",
+                "coordinates": [51.501338, -0.108752]
+            },
+            {
+                "name": "ST GEORGE'S CIRCUS",
+                "coordinates": [51.499120, -0.106150]
+            },
+            {
+                "name": "ELEPHANT & CASTLE / LONDON ROAD",
+                "coordinates": [51.496102, -0.101333]
+            },
+            {
+                "name": "ELEPHANT & CASTLE / NEW KENT ROAD",
+                "coordinates": [51.495061, -0.098697]
+            },
+            {
+                "name": "RODNEY PLACE",
+                "coordinates": [51.494218, -0.094439]
+            },
+            {
+                "name": "BRICKLAYER'S ARMS / NEW KENT ROAD",
+                "coordinates": [51.494333, -0.087649]
+            },
+            {
+                "name": "BRICKLAYER'S ARMS / TOWER BRIDGE ROAD",
+                "coordinates": [51.495693, -0.083414]
+            },
+            {
+                "name": "GRIGGS PLACE",
+                "coordinates": [51.496440, -0.080674]
+            },
+            {
+                "name": "FENDALL STREET",
+                "coordinates": [51.495681, -0.078243]
+            },
+            {
+                "name": "SPA ROAD",
+                "coordinates": [51.494820, -0.076190]
+            },
+            {
+                "name": "ALSCOT ROAD",
+                "coordinates": [51.493691, -0.074264]
+            },
+            {
+                "name": "HARRIS ACADEMY",
+                "coordinates": [51.492803, -0.071118]
+            },
+            {
+                "name": "SOUTHWARK PARK ROAD / ST JAMES'S ROAD",
+                "coordinates": [51.492374, -0.065834]
+            },
+            {
+                "name": "ANCHOR STREET",
+                "coordinates": [51.492200, -0.061290]
+            },
+            {
+                "name": "LYNTON ROAD",
+                "coordinates": [51.490513, -0.059849]
+            },
+            {
+                "name": "GALLEYWALL ROAD / SOUTH BERMONDSEY STN",
+                "coordinates": [51.489053, -0.058024]
+            },
+            {
+                "name": "BEAMISH HOUSE",
+                "coordinates": [51.489610, -0.056401]
+            },
+            {
+                "name": "CORBETTS LANE / THE JOLLY GARDENERS",
+                "coordinates": [51.490942, -0.053175]
+            },
+            {
+                "name": "WARNDON STREET",
+                "coordinates": [51.491113, -0.050503]
+            },
+            {
+                "name": "SURREY QUAYS STATION",
+                "coordinates": [51.492860, -0.047922]
+            },
+            {
+                "name": "ROTHERHITHE POLICE STATION",
+                "coordinates": [51.495462, -0.051355]
+            },
+            {
+                "name": "CANADA WATER BUS STATION",
+                "coordinates": [51.498145, -0.049944]
+            }
         ]
     }
 }

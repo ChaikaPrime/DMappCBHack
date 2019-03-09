@@ -35,37 +35,7 @@ Route name: <input type="text" id="routeName"><br>
 	//london_marker.bindPopup("<b>Hello world!</b><br />I am a popup.");
 	//london_marker.openPopup();
 
-	var station_names = [
-		"NEW OXFORD STREET",
-		"MUSEUM STREET",
-		"HOLBORN STATION",
-		"ALDWYCH / THE ROYAL COURTS OF JUSTICE",
-		"ALDWYCH / SOMERSET HOUSE",
-		"WATERLOO BRIDGE / SOUTH BANK",
-		"WATERLOO STATION / WATERLOO ROAD",
-		"THE OLD VIC",
-		"ST GEORGE'S CIRCUS",
-		"ELEPHANT & CASTLE / LONDON ROAD",
-		"ELEPHANT & CASTLE / NEW KENT ROAD",
-		"RODNEY PLACE",
-		"BRICKLAYER'S ARMS / NEW KENT ROAD",
-		"BRICKLAYER'S ARMS / TOWER BRIDGE ROAD",
-		"GRIGGS PLACE",
-		"FENDALL STREET",
-		"SPA ROAD",
-		"ALSCOT ROAD",
-		"HARRIS ACADEMY",
-		"SOUTHWARK PARK ROAD / ST JAMES'S ROAD",
-		"ANCHOR STREET",
-		"LYNTON ROAD",
-		"GALLEYWALL ROAD / SOUTH BERMONDSEY STN",
-		"BEAMISH HOUSE",
-		"CORBETTS LANE / THE JOLLY GARDENERS",
-		"WARNDON STREET",
-		"SURREY QUAYS STATION",
-		"ROTHERHITHE POLICE STATION",
-		"CANADA WATER BUS STATION"
-	]
+
 
 	plotPath();
 
@@ -101,29 +71,34 @@ var textContent;
 	}, false);
 
 
-
+	var parsedcontent
 	function plotPath() {
 		var client = new XMLHttpRequest();
 		client.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				content = this.responseText;
-				var parsedcontent = JSON.parse(content);
-        console.log(parsedcontent.tower_to_wapping.coordinates);
-				var latlngs = parsedcontent.tower_to_wapping.coordinates;
-
-				var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
-				polyline.bindPopup("I am a polyline.");
+				parsedcontent = JSON.parse(content);
+				console.log(parsedcontent)
+				for (var routeName in parsedcontent) {
+					var routeProperties = parsedcontent[routeName]
+					var points = routeProperties.points;
+					var latlngs = new Array()
+					var i;
+					for (i = 0; i < points.length; i++) { 
+						L.circle(points[i].coordinates, 50, {
+							color: 'red',
+							fillColor: '#f03',
+							fillOpacity: 0.5
+						}).addTo(mymap).bindPopup(points[i].name);
+						latlngs.push(points[i].coordinates)
+					}
+					var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
+					polyline.bindPopup(routeName);
+				}
+				
 				// zoom the map to the polyline
 				//map.fitBounds(polyline.getBounds());
-
-				var i;
-				for (i = 0; i < latlngs.length; i++) { 
-					L.circle(latlngs[i], 50, {
-						color: 'red',
-						fillColor: '#f03',
-						fillOpacity: 0.5
-					}).addTo(mymap).bindPopup(station_names[i]);;
-				}
+				
        }
 		}
 		client.open('GET', '/path.json', true);
