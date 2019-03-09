@@ -3,25 +3,22 @@ from flask import request
 from flask import jsonify
 import json
 
-
 app = Flask(__name__)
 
 @app.route("/")
-def get_main():
+def contribute_route_page():
     with open("contribute.html", "r") as f:
         return f.read()
 
 @app.route("/path.json")
-def get_path():
+def request_path_file():
     with open("path.json", "r") as f:
         return f.read()
 
 @app.route('/submitRoute', methods = ['POST'])
-def user():
+def submit_route():
     if request.method == 'POST':
-        data = request.form # a multidict containing POST data
-        #print(data)
-        #print(data)
+        data = request.form
         keys = list(data.to_dict().keys())
         d = json.loads(keys[0])
         print(d['routeName'])
@@ -36,7 +33,7 @@ def user():
     else:
         # POST Error 405 Method Not Allowed
         pass
-    return 'ok!'
+    return 'POST operation completed'
 
 if __name__ == '__main__':
     app.run()
