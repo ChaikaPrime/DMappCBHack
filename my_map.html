@@ -13,7 +13,7 @@
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
    crossorigin=""></script>
  
-<div id="mapid" style="width: 600px; height: 400px;"></div>
+<div id="mapid" style="width: 100%; height: 600px;"></div>
 
 <input type="file" id="file-input" onchange="readJSONFile(this)" />
 <h3>Contents of the file:</h3>
@@ -68,94 +68,51 @@
 		"CANADA WATER BUS STATION"
 	]
 
-	var latlngs = [
-		//[51.509, -0.08],
-		//[51.503, -0.06],
-		//[51.51, -0.047]
-		[51.516735, -0.128466],
-		[51.517623, -0.124379],
-		[51.516739, -0.119746],
-		[51.513399, -0.116122],
-		[51.511880, -0.117265],
-		[51.507075, -0.115403],
-		[51.503529, -0.111341],
-		[51.501338, -0.108752],
-		[51.499120, -0.106150],
-		[51.496102, -0.101333],
-		[51.495061, -0.098697],
-		[51.494218, -0.094439],
-		[51.494333, -0.087649],
-		[51.495693, -0.083414],
-		[51.496440, -0.080674],
-		[51.495681, -0.078243],
-		[51.494820, -0.076190],
-		[51.493691, -0.074264],
-		[51.492803, -0.071118],
-		[51.492374, -0.065834],
-		[51.492200, -0.061290],
-		[51.490513, -0.059849],
-		[51.489053, -0.058024],
-		[51.489610, -0.056401],
-		[51.490942, -0.053175],
-		[51.491113, -0.050503],
-		[51.492860, -0.047922],
-		[51.495462, -0.051355],
-		[51.498145, -0.049944]
-	];
-	var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
-	polyline.bindPopup("I am a polyline.");
-	// zoom the map to the polyline
-	//map.fitBounds(polyline.getBounds());
-
-	var i;
-	for (i = 0; i < latlngs.length; i++) { 
-		L.circle(latlngs[i], 50, {
-			color: 'red',
-			fillColor: '#f03',
-			fillOpacity: 0.5
-		}).addTo(mymap).bindPopup(station_names[i]);;
-	}
+	plotPath();
 
 	//var popup = L.popup();
 
-	function onMapClick(e) {
+	/*function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
 			.setContent("You clicked the map at " + e.latlng.toString())
 			.openOn(mymap);
 	}
 	mymap.on('click', onMapClick);
+*/
 
-    function readJSONFile(e) {
-		console.log("JSON processing triggered")
-		var file = e.files[0];
-		if (!file) {
-			return;
+	function plotPath() {
+		var client = new XMLHttpRequest();
+		client.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				content = this.responseText;
+				var parsedcontent = JSON.parse(content);
+        console.log(parsedcontent.tower_to_wapping.coordinates);
+				var latlngs = parsedcontent.tower_to_wapping.coordinates;
+
+				var polyline = L.polyline(latlngs, {color: 'red'}).addTo(mymap);
+				polyline.bindPopup("I am a polyline.");
+				// zoom the map to the polyline
+				//map.fitBounds(polyline.getBounds());
+
+				var i;
+				for (i = 0; i < latlngs.length; i++) { 
+					L.circle(latlngs[i], 50, {
+						color: 'red',
+						fillColor: '#f03',
+						fillOpacity: 0.5
+					}).addTo(mymap).bindPopup(station_names[i]);;
+				}
+       }
 		}
-		if (getFileExtension(file.name) != "json")
-		{
-			console.log("Not a Json!")
-			return;
-		}
-		var contents;
-		var reader = new FileReader();
-		reader.onload = function (e) { 
-			contents = e.target.result;
-			displayContents(contents);
-			var parsedcont = JSON.parse(contents);
-			console.log(parsedcont.tower_to_wapping.coordinates);//Key for coordinates
-		};
-		reader.readAsText(file);
+		client.open('GET', '/path.json', true);
+		client.send();
 	}
 
-	function displayContents(contents) {
-		var element = document.getElementById('file-content');
-		element.textContent = contents;
-	}
-
-	function getFileExtension(filen) {
-		return filen.substring(filen.lastIndexOf('.')+1, filen.length) || filen;
-	}
 </script>
 </body>
 </html>
+
+
+
+
