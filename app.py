@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def get_main():
-    with open("my_map.html", "r") as f:
+    with open("contribute.html", "r") as f:
         return f.read()
 
 @app.route("/path.json")
