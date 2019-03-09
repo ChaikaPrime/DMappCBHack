@@ -8,12 +8,14 @@
         "points": [
             {
                 "name": "NEW OXFORD STREET",
-                "coordinates": [51.516735, -0.128466]
+                "coordinates": [
+                    51.516735,
+                    -0.128466
+                ]
             }
         ]
     },
-
-    "tower_to_wapping": {
+    "Oxford Street to Canada Water": {
         "contributors": [
             {
                 "John Smith": "2io3hadjfhajkshdf"
@@ -28,119 +30,301 @@
         "points": [
             {
                 "name": "NEW OXFORD STREET",
-                "coordinates": [51.516735, -0.128466]
+                "coordinates": [
+                    51.516735,
+                    -0.128466
+                ]
             },
             {
                 "name": "MUSEUM STREET",
-                "coordinates": [51.517623, -0.124379]
+                "coordinates": [
+                    51.517623,
+                    -0.124379
+                ]
             },
             {
                 "name": "HOLBORN STATION",
-                "coordinates": [51.516739, -0.119746]
+                "coordinates": [
+                    51.516739,
+                    -0.119746
+                ]
             },
             {
                 "name": "ALDWYCH / THE ROYAL COURTS OF JUSTICE",
-                "coordinates": [51.513399, -0.116122]
+                "coordinates": [
+                    51.513399,
+                    -0.116122
+                ]
             },
             {
                 "name": "ALDWYCH / SOMERSET HOUSE",
-                "coordinates": [51.511880, -0.117265]
+                "coordinates": [
+                    51.51188,
+                    -0.117265
+                ]
             },
             {
                 "name": "WATERLOO BRIDGE / SOUTH BANK",
-                "coordinates": [51.507075, -0.115403]
+                "coordinates": [
+                    51.507075,
+                    -0.115403
+                ]
             },
             {
                 "name": "WATERLOO STATION / WATERLOO ROAD",
-                "coordinates": [51.503529, -0.111341]
+                "coordinates": [
+                    51.503529,
+                    -0.111341
+                ]
             },
             {
                 "name": "THE OLD VIC",
-                "coordinates": [51.501338, -0.108752]
+                "coordinates": [
+                    51.501338,
+                    -0.108752
+                ]
             },
             {
                 "name": "ST GEORGE'S CIRCUS",
-                "coordinates": [51.499120, -0.106150]
+                "coordinates": [
+                    51.49912,
+                    -0.10615
+                ]
             },
             {
                 "name": "ELEPHANT & CASTLE / LONDON ROAD",
-                "coordinates": [51.496102, -0.101333]
+                "coordinates": [
+                    51.496102,
+                    -0.101333
+                ]
             },
             {
                 "name": "ELEPHANT & CASTLE / NEW KENT ROAD",
-                "coordinates": [51.495061, -0.098697]
+                "coordinates": [
+                    51.495061,
+                    -0.098697
+                ]
             },
             {
                 "name": "RODNEY PLACE",
-                "coordinates": [51.494218, -0.094439]
+                "coordinates": [
+                    51.494218,
+                    -0.094439
+                ]
             },
             {
                 "name": "BRICKLAYER'S ARMS / NEW KENT ROAD",
-                "coordinates": [51.494333, -0.087649]
+                "coordinates": [
+                    51.494333,
+                    -0.087649
+                ]
             },
             {
                 "name": "BRICKLAYER'S ARMS / TOWER BRIDGE ROAD",
-                "coordinates": [51.495693, -0.083414]
+                "coordinates": [
+                    51.495693,
+                    -0.083414
+                ]
             },
             {
                 "name": "GRIGGS PLACE",
-                "coordinates": [51.496440, -0.080674]
+                "coordinates": [
+                    51.49644,
+                    -0.080674
+                ]
             },
             {
                 "name": "FENDALL STREET",
-                "coordinates": [51.495681, -0.078243]
+                "coordinates": [
+                    51.495681,
+                    -0.078243
+                ]
             },
             {
                 "name": "SPA ROAD",
-                "coordinates": [51.494820, -0.076190]
+                "coordinates": [
+                    51.49482,
+                    -0.07619
+                ]
             },
             {
                 "name": "ALSCOT ROAD",
-                "coordinates": [51.493691, -0.074264]
+                "coordinates": [
+                    51.493691,
+                    -0.074264
+                ]
             },
             {
                 "name": "HARRIS ACADEMY",
-                "coordinates": [51.492803, -0.071118]
+                "coordinates": [
+                    51.492803,
+                    -0.071118
+                ]
             },
             {
                 "name": "SOUTHWARK PARK ROAD / ST JAMES'S ROAD",
-                "coordinates": [51.492374, -0.065834]
+                "coordinates": [
+                    51.492374,
+                    -0.065834
+                ]
             },
             {
                 "name": "ANCHOR STREET",
-                "coordinates": [51.492200, -0.061290]
+                "coordinates": [
+                    51.4922,
+                    -0.06129
+                ]
             },
             {
                 "name": "LYNTON ROAD",
-                "coordinates": [51.490513, -0.059849]
+                "coordinates": [
+                    51.490513,
+                    -0.059849
+                ]
             },
             {
                 "name": "GALLEYWALL ROAD / SOUTH BERMONDSEY STN",
-                "coordinates": [51.489053, -0.058024]
+                "coordinates": [
+                    51.489053,
+                    -0.058024
+                ]
             },
             {
                 "name": "BEAMISH HOUSE",
-                "coordinates": [51.489610, -0.056401]
+                "coordinates": [
+                    51.48961,
+                    -0.056401
+                ]
             },
             {
                 "name": "CORBETTS LANE / THE JOLLY GARDENERS",
-                "coordinates": [51.490942, -0.053175]
+                "coordinates": [
+                    51.490942,
+                    -0.053175
+                ]
             },
             {
                 "name": "WARNDON STREET",
-                "coordinates": [51.491113, -0.050503]
+                "coordinates": [
+                    51.491113,
+                    -0.050503
+                ]
             },
             {
                 "name": "SURREY QUAYS STATION",
-                "coordinates": [51.492860, -0.047922]
+                "coordinates": [
+                    51.49286,
+                    -0.047922
+                ]
             },
             {
                 "name": "ROTHERHITHE POLICE STATION",
-                "coordinates": [51.495462, -0.051355]
+                "coordinates": [
+                    51.495462,
+                    -0.051355
+                ]
             },
             {
                 "name": "CANADA WATER BUS STATION",
-                "coordinates": [51.498145, -0.049944]
+                "coordinates": [
+                    51.498145,
+                    -0.049944
+                ]
+            }
+        ]
+    },
+    "City to Centre": {
+        "points": [
+            {
+                "name": "0",
+                "coordinates": {
+                    "lat": 51.5027589576403,
+                    "lng": 0.05149841308593751
+                }
+            },
+            {
+                "name": "1",
+                "coordinates": {
+                    "lat": 51.505109712517786,
+                    "lng": 0.026092529296875003
+                }
+            },
+            {
+                "name": "2",
+                "coordinates": {
+                    "lat": 51.50810140697543,
+                    "lng": 0.021629333496093753
+                }
+            },
+            {
+                "name": "3",
+                "coordinates": {
+                    "lat": 51.51173391474148,
+                    "lng": 0.013389587402343752
+                }
+            },
+            {
+                "name": "4",
+                "coordinates": {
+                    "lat": 51.515579783755925,
+                    "lng": 0.00034332275390625
+                }
+            },
+            {
+                "name": "5",
+                "coordinates": {
+                    "lat": 51.51664802308177,
+                    "lng": -0.009956359863281252
+                }
+            },
+            {
+                "name": "6",
+                "coordinates": {
+                    "lat": 51.51472517425703,
+                    "lng": -0.023689270019531253
+                }
+            },
+            {
+                "name": "7",
+                "coordinates": {
+                    "lat": 51.516007082492614,
+                    "lng": -0.03433227539062501
+                }
+            },
+            {
+                "name": "8",
+                "coordinates": {
+                    "lat": 51.52027984939518,
+                    "lng": -0.06557464599609376
+                }
+            },
+            {
+                "name": "9",
+                "coordinates": {
+                    "lat": 51.52305693293332,
+                    "lng": -0.0926971435546875
+                }
+            },
+            {
+                "name": "10",
+                "coordinates": {
+                    "lat": 51.52327054772946,
+                    "lng": -0.10265350341796876
+                }
+            },
+            {
+                "name": "11",
+                "coordinates": {
+                    "lat": 51.52305693293332,
+                    "lng": -0.11398315429687501
+                }
+            },
+            {
+                "name": "12",
+                "coordinates": {
+                    "lat": 51.51963895991333,
+                    "lng": -0.13973236083984378
+                }
             }
         ]
     }

@@ -26,8 +26,13 @@ def user():
         d = json.loads(keys[0])
         print(d['routeName'])
         print(d['newPathPoints'])
-        with open("path.json", "a+") as f:
-            return f.write()
+        with open("path.json", "r") as f:
+            path_json_string = f.read()
+        path_json = json.loads(path_json_string)
+        path_json[d['routeName']] = {"points": [{"name": '{:.0f}'.format(i), "coordinates": coordinates} for i, coordinates in enumerate(d['newPathPoints'])]}
+        path_json_string = json.dumps(path_json)
+        with open("path.json", "w") as f:
+            f.write(path_json_string)
     else:
         # POST Error 405 Method Not Allowed
         pass
