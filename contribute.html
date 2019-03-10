@@ -71,7 +71,7 @@ var textContent;
 	}, false);
 
 
-	var parsedcontent
+	var parsedcontent;
 	function plotPath() {
 		var client = new XMLHttpRequest();
 		client.onreadystatechange = function() {
@@ -97,7 +97,7 @@ var textContent;
 				}
 				
 				// zoom the map to the polyline
-				mymap.fitBounds(polyline.getBounds());
+				mymap.flyToBounds(polyline.getBounds());
 				
        }
 		}
