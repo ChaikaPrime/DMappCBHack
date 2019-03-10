@@ -6,8 +6,18 @@ import json
 app = Flask(__name__)
 
 @app.route("/")
+def main_page():
+    with open("main.html", "r") as f:
+        return f.read()
+
+@app.route("/contribute")
 def contribute_route_page():
     with open("contribute.html", "r") as f:
+        return f.read()
+
+@app.route("/retrieve")
+def retrieve_page():
+    with open("retrieve.html", "r") as f:
         return f.read()
 
 @app.route("/path.json")
