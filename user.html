@@ -28,7 +28,11 @@
 
 	Route name: <input type="text" id="routeName"><br>
 	<button type="button" id='submitButton'>Search</button>
-	<button type="button" id='acceptButton'>Accept Route</button>
+    <button type="button" id='acceptButton'>Accept Route</button>
+    <div>
+            <button id="CheckRecipientBalances">Check Balances (Demo only!)</button>
+            <pre id="BalanceFill"></pre>
+    </div>
 
 	<script>
 		var mymap = L.map('mapid');
@@ -101,7 +105,30 @@
 					console.log("No Error in paying");
 				}
 			});
-		});
+        });
+        $("#CheckRecipientBalances").click(function () {
+            if (typeof web3 !== 'undefined') {
+				web3 = new Web3(web3.currentProvider);
+			} else {
+				// set the provider you want from Web3.providers
+				web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+			}
+			web3.eth.defaultAccount = web3.eth.accounts[0];
+            var element = document.getElementById('BalanceFill');			
+            var contents1 = web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]));
+			var contents2 = web3.fromWei(web3.eth.getBalance(web3.eth.accounts[1]));
+			
+			var fullString ="";
+			
+			fullString = "Updated Balances:\n";
+			
+			fullString = fullString + "Sender- " + web3.eth.accounts[0] + ": " + contents1 + "\n";
+			fullString = fullString + "Receiver-" + web3.eth.accounts[1] + ": " + contents2 + "\n";
+			
+			element.textContent = "	Update balances\n" + fullString;
+			
+			
+        });
 
 		var parsedcontent;
 		document.getElementById("submitButton").addEventListener("click", function () {
