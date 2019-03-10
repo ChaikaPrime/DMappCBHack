@@ -26,6 +26,11 @@ def request_path_file():
     with open("path.json", "r") as f:
         return f.read()
 
+@app.route("/web3.min.js")
+def request_web3min_file():
+    with open("web3.min.js", "r") as f:
+        return f.read()
+
 @app.route('/submitRoute', methods = ['POST'])
 def submit_route():
     if request.method == 'POST':

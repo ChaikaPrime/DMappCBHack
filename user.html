@@ -3,7 +3,10 @@
 
 <head>
 	<title>Get route</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="/web3.min.js"></script>
 </head>
+
 <body>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -24,7 +27,8 @@
 	</form>
 
 	Route name: <input type="text" id="routeName"><br>
-	<button type="button" id='submitButton'>Submit</button>
+	<button type="button" id='submitButton'>Search</button>
+	<button type="button" id='acceptButton'>Accept Route</button>
 
 	<script>
 		var mymap = L.map('mapid');
@@ -73,6 +77,31 @@
 			}
 		}
 		mymap.on('click', onMapClick);
+
+
+		$("#acceptButton").click(function () {
+			if (typeof web3 !== 'undefined') {
+				web3 = new Web3(web3.currentProvider);
+			} else {
+				// set the provider you want from Web3.providers
+				web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+			}
+			web3.eth.defaultAccount = web3.eth.accounts[0];
+			//Pay the contract HERE
+			console.log("Button pressed");
+			web3.eth.sendTransaction({
+				from: web3.eth.accounts[0],
+				to: web3.eth.accounts[1],
+				value: web3.toWei(1, "ether"),
+			}, function (err, transactionHash) {
+				if (err) {
+					console.log("Error");
+					console.log(err);
+				} else {
+					console.log("No Error in paying");
+				}
+			});
+		});
 
 		var parsedcontent;
 		document.getElementById("submitButton").addEventListener("click", function () {
@@ -133,6 +162,6 @@
 		}
 
 	</script>
-	</body>
+</body>
 
 </html>
